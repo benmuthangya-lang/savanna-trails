@@ -1,0 +1,252 @@
+.enquiry-section {
+  padding: 110px 0;
+  color: #fff8eb;
+  background:
+    radial-gradient(circle at 8% 16%, rgba(246, 204, 124, .22), transparent 26%),
+    linear-gradient(125deg, #b85c39, #cf7648 58%, #b75a38);
+}
+
+.enquiry-grid {
+  display: grid;
+  grid-template-columns: .82fr 1.18fr;
+  gap: clamp(48px, 8vw, 110px);
+  align-items: start;
+}
+
+.enquiry-intro h2 {
+  max-width: 520px;
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(42px, 5vw, 66px);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -.04em;
+}
+
+.enquiry-intro > p:not(.eyebrow) {
+  max-width: 510px;
+  margin: 24px 0 0;
+  color: rgba(255, 248, 235, .78);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.demo-storage-note {
+  margin-top: 32px;
+  padding: 20px 22px;
+  color: var(--ink);
+  background: #f4c876;
+  border-left: 4px solid var(--green);
+  border-radius: 3px 10px 10px 3px;
+}
+
+.demo-storage-note strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.demo-storage-note p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.enquiry-points {
+  margin: 28px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 11px;
+  list-style: none;
+  color: rgba(255, 248, 235, .77);
+  font-size: 13px;
+}
+
+.enquiry-points li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.enquiry-points li::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  flex: 0 0 auto;
+  border: 2px solid #f4c876;
+  border-radius: 50%;
+}
+
+.enquiry-form {
+  padding: clamp(24px, 4vw, 40px);
+  color: var(--ink);
+  background: #fffaf1;
+  border: 1px solid rgba(72, 42, 27, .12);
+  border-radius: 14px;
+  box-shadow: 0 24px 55px rgba(82, 36, 20, .22);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 21px 18px;
+}
+
+.form-span {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  display: block;
+  margin: 0 0 8px 2px;
+  color: #344d45;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+
+.form-field label span {
+  color: #a43e28;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  color: var(--ink);
+  border: 1px solid rgba(23, 63, 53, .23);
+  border-radius: 9px;
+  background: #fffdf8;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.form-field input,
+.form-field select {
+  height: 50px;
+  padding: 0 13px;
+}
+
+.form-field select {
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.form-field textarea {
+  min-height: 122px;
+  padding: 13px;
+  line-height: 1.55;
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--green);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(23, 63, 53, .15);
+}
+
+.form-field [aria-invalid="true"] {
+  border-color: #ad3e2c;
+  box-shadow: 0 0 0 2px rgba(173, 62, 44, .1);
+}
+
+.form-field :disabled {
+  cursor: not-allowed;
+  opacity: .68;
+}
+
+.field-hint,
+.field-error {
+  margin: 6px 2px 0;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.field-hint {
+  color: #747b76;
+  text-align: right;
+}
+
+.field-error {
+  color: #9e3423;
+  font-weight: 600;
+}
+
+.form-status {
+  margin-top: 22px;
+  padding: 13px 15px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.status-submitting {
+  color: #38534a;
+  background: #ebe5d8;
+}
+
+.status-success {
+  color: #164b35;
+  background: #ddefd9;
+  border: 1px solid #b4d4ad;
+}
+
+.status-error {
+  color: #862f20;
+  background: #f8e1da;
+  border: 1px solid #e7bcb0;
+}
+
+.submit-button {
+  width: 100%;
+  min-height: 52px;
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fffaf0;
+  border: 0;
+  border-radius: 999px;
+  background: var(--green);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: var(--green-light);
+  transform: translateY(-1px);
+}
+
+.submit-button:disabled {
+  cursor: wait;
+  opacity: .72;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 700ms linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.form-disclaimer {
+  margin: 12px 16px 0;
+  color: #747b76;
+  font-size: 10px;
+  line-height: 1.5;
+  text-align: center;
+}
+
